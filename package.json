@@ -1,0 +1,23 @@
+{
+  "name": "s-xync-coin",
+  "version": "1.0.0",
+  "description": "This is a code along project for the following tutorials...   1. [Creating a blockchain with Javascript](https://www.youtube.com/watch?v=zVqczFZr124)   2. [Proof-of-work implementation](https://www.youtube.com/watch?v=HneatE69814)   3. [Miners rewards and transactions](https://www.youtube.com/watch?v=fRV6cGXVQ4I&t=117s)",
+  "main": "main.js",
+  "dependencies": {
+    "crypto-js": "^3.1.9-1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/s-xync/s-xync-coin.git"
+  },
+  "author": "SaiKumar Immadi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/s-xync/s-xync-coin/issues"
+  },
+  "homepage": "https://github.com/s-xync/s-xync-coin#readme"
+}

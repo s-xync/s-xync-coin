@@ -8,4 +8,6 @@ Throughout this project, I have gotten a solid understanding of how a blockchain
 
 Even though, this project is small, I am very glad that I found time to go through this tutorial.  
 
+**This project uses JAVASCRIPT.**  
+
 Thanks!

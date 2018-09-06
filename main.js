@@ -29,10 +29,37 @@ class Blockchain{
       newBlock.hash=newBlock.calculateHash();
       this.chain.push(newBlock);
   }
+
+  isChainValid(){
+    for(let i=1;i<this.chain.length;i++){
+      const currentBlock=this.chain[i];
+      const previousBlock=this.chain[i-1];
+      if(currentBlock.hash!==currentBlock.calculateHash()){
+        return false;
+      }
+
+      if(currentBlock.previousHash!==previousBlock.hash){
+        return false;
+      }
+    }
+    return true;
+  }
 }
 
 let sxync_coin=new Blockchain();
 sxync_coin.addBlock(new Block(1,"27/05/2018",{amount:4}));
-sxync_coin.addBlock(new Block(1,"12/06/2018",{amount:10}));
+sxync_coin.addBlock(new Block(2,"12/06/2018",{amount:10}));
+
+//to tamper with the blockchain, uncomment the next line
+// sxync_coin.chain[1].data={amount:100};
+//even the next line won't make the above line work because of the rippling effect
+// sxync_coin.chain[1].hash=sxync_coin.chain[1].calculateHash();
 
 console.log(JSON.stringify(sxync_coin,null,4));
+
+
+if(sxync_coin.isChainValid()){
+  console.log("\nBlockchain is valid");
+}else if(!sxync_coin.isChainValid()){
+  console.log("\nBlockchain is not valid");
+}
